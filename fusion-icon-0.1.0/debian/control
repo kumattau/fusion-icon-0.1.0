@@ -18,7 +18,7 @@ Depends: ${misc:Depends},
  python-gtk2 | python-qt4,
  x11-utils,
  mesa-utils,
- compiz-gtk | compiz-kde | compiz-gnome (>= 0.9.0)
+ compiz-gtk | compiz-kde | compiz-gnome (>= 0.8.4)
 Description: tray icon to launch and manage Compiz Fusion
  The OpenCompositing Project brings 3D desktop visual effects that
  improve the usability and eye candy of the X Window System and provide

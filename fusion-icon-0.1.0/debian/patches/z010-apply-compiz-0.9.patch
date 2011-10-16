@@ -1,0 +1,26 @@
+--- FusionIcon/util.py	2011-10-17 04:56:34.499896141 +0900
++++ FusionIcon/util.py.new	2011-10-17 04:55:40.147430073 +0900
+@@ -216,14 +216,17 @@
+ 		if parser_options.verbose:
+ 			print ' * Opening CompizConfig context'
+ 
+-		try:
+-			context = compizconfig.Context( \
+-				plugins=['decoration'], basic_metadata=True)
+ 
+-		except:
+-			context = compizconfig.Context()
+ 
+-		self.command = context.Plugins['decoration'].Display['command']
++
++		# always get all plugins for compiz-0.8/0.9 compatibility
++		context = compizconfig.Context()
++
++		# try for compiz-0.8 except for compiz-0.9
++		try:
++			self.command = context.Plugins['decoration'].Display['command']
++		except:
++			self.command = context.Plugins['decor'].Screen['command']
+ 
+ 		for decorator in installed.decorators:
+ 			self[decorator] = CompizDecorator(decorator, self, installed)
