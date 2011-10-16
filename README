@@ -1,0 +1,11 @@
+-----------------------------
+fusion-icon build and install
+-----------------------------
+
+fusion-icon build and install on debian
+
+$ ./INSTALL.sh
+
+- this fusion-icon is apply for compiz-0.9 only
+- build and install fusion-icon debian package
+
